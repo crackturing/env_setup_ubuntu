@@ -10,6 +10,11 @@
 #modify /etc/fstab auto mount server directory:
 #//10.100.129.111/home/tangqishun/beta_android/IMX8_beta  /home/tensorflow/chinatsptt/server_imx8 cifs username=tangqishun,password=123456,uid=1000,gid=1000 0 0 
 
+#sublime support chinese input
+#cp libsublime-imfix.so /opt/sublime_text/
+#modify /usr/bin/subl
+#LD_PRELOAD=/opt/sublime_text/libsublime-imfix.so exec /opt/sublime_text/sublime_text "$@"
+
 #android tools begin
 sudo apt-get install uuid uuid-dev
 sudo apt-get install zlib1g-dev liblz-dev
@@ -39,5 +44,6 @@ sudo apt-get install fcitx
 sudo apt-get install fcitx-config-gtk
 sudo apt-get install fcitx-table-all
 sudo apt-get install nfs-common
+sudo apt-get install build-essential libgtk2.0-dev
 ##other tools end
 
